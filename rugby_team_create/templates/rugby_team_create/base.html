@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'rugby_team_create/style.css' %}">
+    <style>
+       {
+        outline: 1px solid #ff0000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="{% url 'rugby_team_create:top' %}">オリジナルのラグビーチームを作ろう！</a></h1>
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="{% url 'rugby_team_create:team_create' %}">チーム登録</a></li>
+          <li><a href="{% url 'rugby_team_create:team_list' %}">チーム一覧</a></li>
+          <li><a href="{% url 'rugby_team_create:player_list' %}">選手一覧</a></li>
+          <li><a href="{% url 'rugby_team_create:player_create' %}">選手登録</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+  </body>
+</html>

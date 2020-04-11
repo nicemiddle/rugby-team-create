@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    {{team.name}}
-    {{team.PR1}}
-    {{team.HO}}
-  </body>
-</html>
+{% extends 'rugby_team_create/base.html' %}
+
+{% block title %}{{ team.name }}{% endblock %}
+
+{% block main %}
+{{team.name}}
+{{team.PR1}}
+{{team.HO}}
+{% endblock %}

@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+{% extends 'rugby_team_create/base.html' %}
+
+{% block title %}選手登録{% endblock %}
+
+{% block main %}
     <form action="{% url 'rugby_team_create:player_create' %}" method="POST">
       {{form.as_p}}
       {% csrf_token %}
       <button type="submit">登録</button>
     </form>
-  </body>
-</html>
+{% endblock %}

@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    {% for team in team_list %}
-      <a href="{% url 'rugby_team_create:team_detail' team.id %}">{{team.name}}</a>  
-    {% endfor %}
-  </body>
-</html>
+{% extends 'rugby_team_create/base.html' %}
+
+{% block title %}チーム一覧{% endblock %}
+
+{% block main %}
+{% for team in team_list %}
+  <a href="{% url 'rugby_team_create:team_detail' team.id %}">{{team.name}}</a>
+{% endfor %}
+{% endblock %}

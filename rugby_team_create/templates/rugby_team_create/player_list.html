@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-   {% for player in player_list %}
-       {{player.name}}
-       {{player.nationality}}
-   {% endfor %}
-  </body>
-</html>
+{% extends 'rugby_team_create/base.html' %}
+
+{% block title %}選手一覧{% endblock %}
+
+{% block main %}
+{% for player in player_list %}
+   {{player.name}}
+   {{player.nationality}}
+{% endfor %}
+{% endblock %}
