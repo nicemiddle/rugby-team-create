@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="{% url 'rugby_team_create:team_create' %}" method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit">登録</button>
+  </body>
+</html>
