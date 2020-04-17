@@ -11,7 +11,7 @@ class Player(models.Model):
 
 class Team(models.Model):
     name = models.CharField('チーム名', max_length=225)
-    creater_name = models.CharField('製作者名', max_length=225, null=True)
+    creator_name = models.CharField('製作者名', max_length=225, null=True)
     PR1 = models.ForeignKey(Player, verbose_name='左プロップ', on_delete=models.PROTECT, related_name='PR1_player', null=True, blank=True)
     HO = models.ForeignKey(Player, verbose_name='フッカー', on_delete=models.PROTECT, related_name='HO_player', null=True, blank=True)
     PR2 = models.ForeignKey(Player, verbose_name='右プロップ', on_delete=models.PROTECT, related_name='PR2_player', null=True, blank=True)

@@ -3,7 +3,16 @@
 {% block title %}チーム一覧{% endblock %}
 
 {% block main %}
+<table>
+  <tr>
+    <th>チーム名</th>
+    <th>製作者</th>
+  </tr>
 {% for team in team_list %}
-  <a href="{% url 'rugby_team_create:team_detail' team.id %}">{{team.name}}</a>
+ <tr>
+   <td align="center"><a href="{% url 'rugby_team_create:team_detail' team.id %}">{{team.name}}</a></td>
+   <td align="center">{{team.creator_name}}</td>
+ </tr>
 {% endfor %}
+</table>
 {% endblock %}

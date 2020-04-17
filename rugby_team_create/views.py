@@ -3,6 +3,7 @@ from django.views import generic
 from .models import Team, Player
 from .forms import TeamCreateForm, PlayerCreateForm
 from django.urls import reverse_lazy
+
 # Create your views here.
 class TopTemplate(generic.TemplateView):
     template_name = 'rugby_team_create/top.html'
@@ -17,6 +18,11 @@ class TeamCreate(generic.CreateView):
     model = Team
     success_url = reverse_lazy('rugby_team_create:team_list')
     form_class = TeamCreateForm
+
+#チームの削除
+class TeamDelete(generic.DeleteView):
+    model = Team
+    success_url = reverse_lazy('rugby_team_create:team_list')
 
 #選手一覧表示
 class PlayerList(generic.ListView):
