@@ -19,6 +19,13 @@ class TeamCreate(generic.CreateView):
     success_url = reverse_lazy('rugby_team_create:team_list')
     form_class = TeamCreateForm
 
+
+#チームの更新
+class TeamUpdate(generic.UpdateView):
+    model = Team
+    success_url = reverse_lazy('rugby_team_create:team_list')
+    form_class = TeamCreateForm  #チーム作成時と同じで良い
+
 #チームの削除
 class TeamDelete(generic.DeleteView):
     model = Team

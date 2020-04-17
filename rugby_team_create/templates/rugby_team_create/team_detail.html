@@ -21,4 +21,5 @@
 {{team.FB}}
 
 <a href="{% url 'rugby_team_create:team_delete_confirm' team.pk %}">削除</a>
+<a href="{% url 'rugby_team_create:team_update' team.pk  %}">更新</a>
 {% endblock %}

@@ -10,5 +10,6 @@ urlpatterns = [
     path('team_create/', views.TeamCreate.as_view(), name='team_create'),
     path('player_list/', views.PlayerList.as_view(), name='player_list'),
     path('player_create/', views.PlayerCreate.as_view(), name='player_create'),
-    path('team_delete_confirm/<int:pk>', views.TeamDelete.as_view(), name='team_delete_confirm')
+    path('team_delete_confirm/<int:pk>', views.TeamDelete.as_view(), name='team_delete_confirm'),
+    path('team_update/<int:pk>', views.TeamUpdate.as_view(), name='team_update')
 ]

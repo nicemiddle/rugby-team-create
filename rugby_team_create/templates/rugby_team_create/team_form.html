@@ -3,7 +3,7 @@
 {% block title %}チーム作成フォーム{% endblock %}
 
 {% block main %}
-<form action="{% url 'rugby_team_create:team_create' %}" method="POST">
+<form action="" method="POST">
     {{form.as_p}}
     {% csrf_token %}
     <button type="submit">登録</button>
