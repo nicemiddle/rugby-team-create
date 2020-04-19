@@ -1,3 +1,4 @@
+{% load sass_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
@@ -5,11 +6,7 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'rugby_team_create/style.css' %}">
-    <style>
-       {
-        outline: 1px solid #ff0000;
-      }
-    </style>
+    <link rel="stylesheet" href="{% sass_src 'rugby_team_create/rtc.scss' %}">
   </head>
   <body>
     <header>

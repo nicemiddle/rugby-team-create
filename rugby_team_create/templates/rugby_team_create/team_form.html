@@ -3,8 +3,19 @@
 {% block title %}チーム作成フォーム{% endblock %}
 
 {% block main %}
+<div class="n_form">
 <form action="" method="POST">
-    {{form.as_p}}
+    {% for field in form %}
+        <div class="n_{{forloop.counter}}">
+            {{field.label_tag}}
+            <div>
+            {{field}}
+            </div>
+        </div>
+    {% endfor %}
+    <button class="btn1" type="submit">登録</button>
     {% csrf_token %}
-    <button type="submit">登録</button>
+</form>
+</div>
+
 {% endblock %}
