@@ -15,3 +15,14 @@ h1 {
 .top_image {
   text-align: center;
 }
+
+table {
+  margin: auto;  
+}
+
+th {
+  background-color: #5a9ed4;
+}
+td {
+  background-color: #abcce6;
+}

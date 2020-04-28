@@ -4,6 +4,12 @@ form {
   text-align: center;
 }
 
+.n_team_detail > div {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
 @for $i from 2 through 17 {
   @if $i == 2 {
     .n_#{$i} {
@@ -92,7 +98,7 @@ form {
   width: 30%;
   order: 7;
   display: block;
-  margin: 30px auto; 
+  margin: 30px auto;
 }
 
 select {

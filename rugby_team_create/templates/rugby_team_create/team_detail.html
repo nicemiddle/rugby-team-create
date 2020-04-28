@@ -3,23 +3,76 @@
 {% block title %}{{ team.name }}{% endblock %}
 
 {% block main %}
-{{team.name}}
-{{team.PR1}}
-{{team.HO}}
-{{team.PR2}}
-{{team.LO1}}
-{{team.LO2}}
-{{team.FL1}}
-{{team.FL2}}
-{{team.NO8}}
-{{team.SH}}
-{{team.SO}}
-{{team.WTB1}}
-{{team.CTB1}}
-{{team.CTB2}}
-{{team.WTB2}}
-{{team.FB}}
 
+<div class="n_team_detail">
+{{team.name}}
+<div class="front_row">
+  <div class="n_3">
+    {{team.PR1}}
+  </div>
+  <div class="n_4">
+    {{team.HO}}
+  </div>
+  <div class="n_5">
+    {{team.PR2}}
+  </div>
+</div>
+<div class="second_row">
+  <div class="n_6">
+    {{team.LO1}}
+  </div>
+  <div class="n_7">
+    {{team.LO2}}
+  </div>
+</div>
+<div class="back_row_1">
+  <div class="n_8">
+    {{team.FL1}}
+  </div>
+  <div class="n_9">
+    {{team.FL2}}
+  </div>
+</div>
+<div class="back_row_2">
+  <div class="n_10">
+   {{team.NO8}}
+  </div>
+</div>
+<div class="SH">
+  <div class="n_11">
+   {{team.SH}}
+  </div>
+</div>
+<div class="backs_1">
+  <div class="n_12">
+    {{team.SO}}
+  </div>
+  <div class="n_13">
+    {{team.WTB1}}
+  </div>
+  <div class="n_14">
+    {{team.CTB1}}
+  </div>
+</div>
+<div class="backs_2">
+  <div class="n_15">
+    {{team.CTB2}}
+  </div>
+  <div class="n_16">
+    {{team.WTB2}}
+  </div>
+  <div class="n_17">
+   {{team.FB}}
+  </div>
+</div>
+
+
+
+
+
+</div>
 <a href="{% url 'rugby_team_create:team_delete_confirm' team.pk %}">削除</a>
 <a href="{% url 'rugby_team_create:team_update' team.pk  %}">更新</a>
+
+
 {% endblock %}
