@@ -1,0 +1,106 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.n_team_detail > div {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+@for $i from 2 through 17 {
+  @if $i == 2 {
+    .n_#{$i} {
+      width: 70%;
+    }
+  } @else if $i < 6 {
+    .n_#{$i} {
+      width: 30%;
+      margin: auto;
+    }
+  } @else if $i < 8 {
+    .n_#{$i} {
+      width: 30%;
+      margin: auto;
+    }
+  } @else if $i == 8 {
+    .n_#{$i} {
+      width: 50%;
+      margin: auto;
+      text-align: left;
+      select {
+        width: 50%;
+      }
+    }
+  } @else if $i == 9 {
+    .n_#{$i} {
+      width: 50%;
+      box-sizing: border-box;
+      text-align: right;
+      select {
+        width: 50%;
+      }
+    }
+  } @else if $i == 10 {
+    .n_#{$i} {
+      margin: auto;
+    }
+  } @else if $i == 11 {
+    .n_#{$i} {
+      width: 80%;
+      margin: auto;
+      select {
+        width: 37%;
+      }
+    }
+  } @else if $i == 12 {
+    .n_#{$i} {
+      width: 30%;
+      order: 2;
+      margin: auto;
+    }
+  } @else if $i == 13 {
+    .n_#{$i} {
+      width: 30%;
+      order: 4;
+      margin: auto;
+    }
+  } @else if $i == 14 {
+    .n_#{$i} {
+      width: 30%;
+      order: 1;
+      margin: auto;
+    }
+  } @else if $i == 15 {
+    .n_#{$i} {
+      width: 30%;
+      order: 3;
+      margin: auto;
+    }
+  } @else if $i == 16 {
+    .n_#{$i} {
+      width: 30%;
+      order: 6;
+      margin: auto;
+    }
+  } @else if $i == 17 {
+    .n_#{$i} {
+      width: 30%;
+      order: 5;
+      margin: auto;
+    }
+  }
+}
+
+.btn1 {
+  width: 30%;
+  order: 7;
+  display: block;
+  margin: 30px auto;
+}
+
+select {
+  width: 100%;
+}
